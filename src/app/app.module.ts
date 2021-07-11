@@ -9,6 +9,8 @@ import { PhysicalActivityComponent } from './physical-activity/physical-activity
 import { HomeComponent } from './home/home.component';
 import { DietPlanComponent } from './diet-plan/diet-plan.component';
 import { RecipeComponent } from './recipe/recipe.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { RecipeComponent } from './recipe/recipe.component';
     PhysicalActivityComponent,
     HomeComponent,
     DietPlanComponent,
-    RecipeComponent
+    RecipeComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
