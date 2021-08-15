@@ -11,6 +11,12 @@ import { DietPlanComponent } from './diet-plan/diet-plan.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { UserService } from './services/userService';
+import { ActivityInfoComponent } from './activity-info/activity-info.component';
+import { EditActivityComponent } from './edit-activity/edit-activity.component';
+import { AddActivityComponent } from './add-activity/add-activity.component';
 
 
 @NgModule({
@@ -23,13 +29,18 @@ import { RegisterComponent } from './register/register.component';
     DietPlanComponent,
     RecipeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ActivityInfoComponent,
+    EditActivityComponent,
+    AddActivityComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,14 @@
-<p>diet-plan works!</p>
+<br />
+<br />
+<div class="container-fluid d-flex justify-content-center" *ngFor="let item of recipes">
+  <div class="card text-white bg-dark mb-3 w-50">
+    <div class="card-header border-success">Calories: {{item.calories.toString()}}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.description}}</p>
+    </div>
+    <div class="card-footer bg-transparent d-flex justify-content-end">
+      <button type="button" class="btn btn-success">More Info</button>
+    </div>
+  </div>
+</div>

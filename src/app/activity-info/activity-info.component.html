@@ -1,0 +1,41 @@
+<!-- Page Content -->
+<br />
+<br />
+<br />
+<br />
+<div class="container-fluid d-flex justify-content-center">
+
+  <!-- Portfolio Item Heading -->
+  <div class="card text-white bg-dark mb-3 w-50">
+    <div class="card-header border-success">Time For Activity: {{item.deadline}}, Date: {{item.date | date}}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <br />
+      <h6>Description:</h6>
+      <p class="card-text">{{item.description}}</p>
+      <h6>Requisites:</h6>
+      <p class="card-text">{{item.requisites}}</p>
+    </div>
+    <div class="card-footer bg-transparent d-flex justify-content-around">
+      <button type="submit"
+          class="btn btn-success"
+          [routerLink]="['/activities']">
+              <i class="fas fa-chevron-left"></i>
+          Back
+      </button>
+      <button type="submit"
+          class="btn btn-success"
+          [routerLink]="['/edit', item.getId()]">
+              <i class="fas fa-chevron-left"></i>
+          Edit
+      </button>
+      <button type="submit"
+          class="btn btn-danger"
+          (click)="deleteItem()"
+          [routerLink]="['/activities']">
+              <i class="far fa-trash-alt fa-lg"></i>
+          Delete
+      </button>
+    </div>
+</div>
+<!-- /.container -->

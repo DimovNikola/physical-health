@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/userService';
 
 @Component({
   selector: 'nav-bar',
@@ -7,15 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  clicked: boolean = false;
+  userRegistered: boolean;
 
-  constructor() { }
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit(): void {
+    let user = this.userService.getRegisteredUser();
+    console.log(user);
+    if(user == null) {
+      this.userRegistered = false;
+    }
+    else {
+      this.userRegistered = true;
+    }
   }
 
-  displayMenu() {
-    document.getElementById("navbarNav")!.classList.toggle("show");
-  }
+  getUserEmail() {
+    let userEmail = this.userService.getRegisteredUser().getEmail()
+    console.log(userEmail);
+    return userEmail;
 
+  }
 }

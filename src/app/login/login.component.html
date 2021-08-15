@@ -24,6 +24,7 @@
                   name="username"
                   class="form-control"
                   placeholder="Username"
+                  [(ngModel)]="userEmail"
                 />
               </div>
               <div class="col-12">
@@ -33,6 +34,7 @@
                   name="password"
                   class="form-control"
                   placeholder="Password"
+                  [(ngModel)]="userPassword"
                 />
               </div>
               <div class="col-12">
@@ -48,7 +50,7 @@
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-dark float-end">
+                <button (click)="login()"type="button" class="btn btn-dark float-end">
                   Login
                 </button>
               </div>

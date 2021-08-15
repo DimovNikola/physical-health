@@ -13,8 +13,12 @@
           <a class="nav-link" [routerLink]="['/diet-plan']">Diet Plan</a>
         </li>
       </ul>
-      <form class="d-flex ms-auto me-1 gap-2">
+      <form *ngIf="!userRegistered" class="d-flex ms-auto me-1 gap-2">
         <button class="btn btn-outline-success" type="submit" [routerLink]="['/login']">Login</button>
+        <button class="btn btn-outline-success" type="submit" [routerLink]="['/register']">Register</button>
+      </form>
+      <form *ngIf="userRegistered" class="d-flex ms-auto me-1 gap-2">
+        <h2>{{getUserEmail()}}</h2>
       </form>
     </div>
   </div>

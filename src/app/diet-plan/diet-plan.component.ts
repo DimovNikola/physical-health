@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from 'src/assets/models/Recipe';
+import { recipes } from '../../assets/data/recipes';
 
 @Component({
   selector: 'app-diet-plan',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DietPlanComponent implements OnInit {
 
+  recipes: Recipe[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.getData();
   }
 
+  getData() {
+    this.recipes = [...recipes];
+  }
 }

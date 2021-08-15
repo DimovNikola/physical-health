@@ -1,0 +1,47 @@
+<br />
+<br />
+<br />
+<br />
+<div class="container-fluid d-flex justify-content-center">
+  <div class="card text-white bg-dark mb-3 w-50">
+    <div class="card-header border-success">EDITING:  {{item.getName()}}</div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Name</span>
+        <input type="text" class="form-control" id="name" value="{{item.getName()}}" placeholder="{{item.getName()}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Time</span>
+        <input type="text" class="form-control" id="time" value="{{item.getDeadline()}}" placeholder="{{item.getDeadline()}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3 ">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Description</span>
+        <textarea class="form-control" id="description" placeholder="{{item.getDescription()}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">{{item.getDescription()}} </textarea>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Requisites</span>
+        <textarea type="text" class="form-control" id="requisites" placeholder="{{item.getRequisites()}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">{{item.getRequisites()}}</textarea>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Date</span>
+        <input type="text" class="form-control" id="date" value="{{item.getDate() | date}}" placeholder="{{item.getDate() | date}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+    <div class="card-footer bg-transparent d-flex justify-content-around">
+      <button type="submit"
+          class="btn btn-success"
+          [routerLink]="['/info', item.getId()]">
+              <i class="fas fa-chevron-left"></i>
+          Back
+      </button>
+      <button type="submit"
+          class="btn btn-success"
+          (click)="saveItem()"
+          [routerLink]="['/activities']">
+              <i class="far fa-trash-alt fa-lg"></i>
+          Save
+      </button>
+    </div>
+
+</div>
+

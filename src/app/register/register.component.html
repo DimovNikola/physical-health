@@ -16,12 +16,12 @@
                     <form action="" method="" class="row g-3">
                         <h4>Create an Acount!</h4>
                         <div class="col-12">
-                            <label>Username</label>
-                            <input type="text" name="username" class="form-control" placeholder="Username">
+                            <label>Email</label>
+                            <input [(ngModel)]="userEmail" type="text" name="email" class="form-control" placeholder="Email" #email>
                         </div>
                         <div class="col-12">
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <input [(ngModel)]="userPassword" type="password" name="password" class="form-control" placeholder="Password" #password>
                         </div>
                         <div class="col-12">
                             <div class="form-check">
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-dark float-end">Register</button>
+                            <button type="submit" class="btn btn-dark float-end" (click)="register()">Register</button>
                         </div>
                     </form>
                     <hr class="mt-4">
