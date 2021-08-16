@@ -1,14 +1,21 @@
 <br />
 <br />
+<div class="container-fluid d-flex justify-content-center align-items-center">
+  <a [routerLink]="['/add-recipe']" type="button" class="btn btn-outline-secondary btn-lg col-6 mx-auto">Click to Create Recipe</a>
+</div>
+<br />
+<br />
 <div class="container-fluid d-flex justify-content-center" *ngFor="let item of recipes">
   <div class="card text-white bg-dark mb-3 w-50">
     <div class="card-header border-success">Calories: {{item.calories.toString()}}</div>
     <div class="card-body">
       <h5 class="card-title">{{item.name}}</h5>
-      <p class="card-text">{{item.description}}</p>
+      <div class="container d-flex justify-content-center">
+        <img src="{{item.imageUrl}}" class="img-fluid" style="height: 30vh;" alt="...">
+      </div>
     </div>
     <div class="card-footer bg-transparent d-flex justify-content-end">
-      <button type="button" class="btn btn-success">More Info</button>
+      <a [routerLink]="['/diet-info', item.id]" type="button" class="btn btn-success">More Info</a>
     </div>
   </div>
 </div>

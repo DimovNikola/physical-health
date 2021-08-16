@@ -45,9 +45,10 @@ export class EditActivityComponent implements OnInit {
 
     var newActivity = new Activity(this.item.getId() + 1, name, time, description, requisites, date);
 
+    let objIndex = activities.findIndex((obj => obj.id == this.item.getId()));
+
     this.item = newActivity;
 
-    let objIndex = activities.findIndex((obj => obj.id == this.item.getId()));
     this.activities = this.activities.splice(objIndex, 1, this.item);
     activities.splice(objIndex, 1, this.item);
   }

@@ -1,0 +1,47 @@
+<br />
+<br />
+<br />
+<br />
+<div class="container-fluid d-flex justify-content-center">
+  <div class="card text-white bg-dark mb-3 w-50">
+    <div class="card-header border-success">Create New Activity</div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Name</span>
+        <input type="text" class="form-control" id="name" placeholder="Recipe Name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Calories</span>
+        <input type="text" class="form-control" id="calories" placeholder="200" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3 ">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Description</span>
+        <textarea class="form-control" id="description" placeholder="This recipe is for....." aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Ingredients</span>
+        <textarea type="text" class="form-control" id="ingredients" placeholder="Apple, Orange, 1 cup of mayo....." aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-default" style="width: 6vw;">Image URL</span>
+        <input type="text" class="form-control" id="imageUrl" placeholder="" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+    <div class="card-footer bg-transparent d-flex justify-content-around">
+      <button type="submit"
+          class="btn btn-success"
+          [routerLink]="['/diet-plan']">
+              <i class="fas fa-chevron-left"></i>
+          Back
+      </button>
+      <button type="submit"
+          class="btn btn-success"
+          (click)="saveItem()"
+          [routerLink]="['/diet-plan']">
+              <i class="far fa-trash-alt fa-lg"></i>
+          Create
+      </button>
+    </div>
+
+</div>
+

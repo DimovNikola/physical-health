@@ -17,6 +17,9 @@ import { UserService } from './services/userService';
 import { ActivityInfoComponent } from './activity-info/activity-info.component';
 import { EditActivityComponent } from './edit-activity/edit-activity.component';
 import { AddActivityComponent } from './add-activity/add-activity.component';
+import { DietInfoComponent } from './diet-info/diet-info.component';
+import { EditRecipeComponent } from './edit-recipe/edit-recipe.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { AddActivityComponent } from './add-activity/add-activity.component';
     RegisterComponent,
     ActivityInfoComponent,
     EditActivityComponent,
-    AddActivityComponent
+    AddActivityComponent,
+    DietInfoComponent,
+    EditRecipeComponent,
+    AddRecipeComponent
   ],
   imports: [
     BrowserModule,
