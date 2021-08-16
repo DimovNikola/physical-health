@@ -2,7 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import {users} from '../../assets/data/users';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../services/userService';
-import { User } from 'src/assets/models/User';
+import { User } from '..//..//assets/models/User';
 import { Router } from '@angular/router';
 
 @Component({

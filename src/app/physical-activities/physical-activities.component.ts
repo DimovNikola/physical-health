@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { activities } from 'src/assets/data/activities';
-import { Activity } from 'src/assets/models/Activity';
+import { activities } from '..//..//assets/data/activities';
+import { Activity } from '..//..//assets/models/Activity';
 
 @Component({
   selector: 'app-physical-activities',
@@ -19,5 +19,5 @@ export class PhysicalActivitiesComponent implements OnInit {
   getData() {
     this.activitiesList = [...activities];
   }
-  
+
 }

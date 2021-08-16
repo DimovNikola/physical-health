@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { recipes } from 'src/assets/data/recipes';
-import { Recipe } from 'src/assets/models/Recipe';
+import { recipes } from '..//..//assets/data/recipes';
+import { Recipe } from '..//..//assets/models/Recipe';
 
 @Component({
   selector: 'app-add-recipe',

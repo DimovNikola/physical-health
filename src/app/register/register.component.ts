@@ -1,6 +1,6 @@
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/assets/models/User';
+import { User } from '..//..//assets/models/User';
 import {users} from '../../assets/data/users';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';

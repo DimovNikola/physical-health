@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from 'src/assets/models/User';
+import { User } from '..//..//assets/models/User';
 
 @Injectable()
 export class UserService {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { activities } from 'src/assets/data/activities';
+import { activities } from '..//..//assets/data/activities';
 
 @Component({
   selector: 'app-physical-activity',
